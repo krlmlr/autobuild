@@ -1,4 +1,8 @@
 language: c
+install:
+  - git config --global user.email "krlmlr+autobuild@mailbox.org"
+  - git config --global user.name "AutoBuild"
+
 script:
   - make
   - git status
