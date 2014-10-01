@@ -19,4 +19,6 @@ script:
   - git log
   - git commit -C HEAD
   - git commit --amend -m "Update binaries"
-  - GIT_ASKPASS=~/askpass git push
+  - git remote remove origin
+  - git remote add origin https://github.com/krlmlr/autobuild.git
+  - GIT_ASKPASS=~/askpass git push -u origin master
