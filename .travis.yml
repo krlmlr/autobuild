@@ -2,3 +2,8 @@ language: c
 script:
   - make
   - git status
+  - git add -f out
+  - git checkout master
+  - git log
+  - git commit -C HEAD
+  - git commit --amend -m "Update binaries"
